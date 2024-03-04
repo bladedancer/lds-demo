@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=&quot;utf-8&quot; />
+    </head>
+    <body>
+        <script>
+        var source = new EventSource('/events');
+        source.onmessage = function(e) {
+            document.body.innerHTML += e.data + '<br>';
+        };
+        </script>
+    </body>
+</html>
